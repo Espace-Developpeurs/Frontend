@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import AppLayout from './layouts/AppLayout/AppLayout'
 import HomePage from './pages/home/HomePage'
+import ExplorePage from './pages/explore/ExplorePage'
 
 const pageLabels = {
   home: 'Accueil',
@@ -47,6 +48,8 @@ function App() {
     >
       {activePage === 'home' ? (
         <HomePage onNavigate={handleNavigate} />
+      ) : activePage === 'explore' ? (
+        <ExplorePage />
       ) : (
         <PlaceholderPage page={activePage} />
       )}
