@@ -3,7 +3,7 @@
      COLORS
      ================================ */
 
-  --color-bg-primary: #0b0d10;
+  --color-bg-primary: #090b0f;
   --color-bg-secondary: #11141a;
   --color-bg-tertiary: #171b23;
 
@@ -18,7 +18,7 @@
   --color-text-secondary: #a7adba;
   --color-text-muted: #707785;
 
-  --color-primary: #7c5cff;
+  --color-primary: #7c8cff;
   --color-primary-hover: #8d70ff;
   --color-primary-soft: rgba(124, 92, 255, 0.14);
 
