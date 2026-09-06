@@ -3,6 +3,7 @@ import { useState } from 'react'
 import AppLayout from './layouts/AppLayout/AppLayout'
 import HomePage from './pages/home/HomePage'
 import ExplorePage from './pages/explore/ExplorePage'
+import ChallengesPage from './pages/challenges/ChallengesPage'
 
 const pageLabels = {
   home: 'Accueil',
@@ -50,6 +51,8 @@ function App() {
         <HomePage onNavigate={handleNavigate} />
       ) : activePage === 'explore' ? (
         <ExplorePage />
+      ) : activePage === 'challenges' ? (
+        <ChallengesPage />
       ) : (
         <PlaceholderPage page={activePage} />
       )}
