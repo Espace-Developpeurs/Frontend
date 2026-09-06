@@ -1,0 +1,112 @@
+.challenges-page {
+  width: 100%;
+}
+
+.challenges-page .page-header {
+  margin-bottom: 35px;
+}
+
+.challenge-main {
+  max-width: 800px;
+  padding: 35px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.challenge-main h2 {
+  font-size: 30px;
+  line-height: 1.3;
+  margin: 25px 0;
+}
+
+.category {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-hover);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+}
+
+.answers {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.answer {
+  width: 100%;
+  padding: 17px;
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.answer:hover {
+  border-color: var(--color-primary);
+}
+
+.answer.selected {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+
+.answer:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.primary-button {
+  padding: 12px 18px;
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-weight: var(--font-weight-semibold);
+  transition: 0.2s ease;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.primary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.challenge-feedback {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.challenge-feedback.success {
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: var(--color-success);
+}
+
+.challenge-feedback.error {
+  background: rgba(248, 113, 113, 0.12);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  color: var(--color-danger);
+}
+
+@media (max-width: 750px) {
+  .challenge-main {
+    padding: 22px;
+  }
+
+  .challenge-main h2 {
+    font-size: 24px;
+  }
+}
