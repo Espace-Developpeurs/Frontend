@@ -4,6 +4,7 @@ import AppLayout from './layouts/AppLayout/AppLayout'
 import HomePage from './pages/home/HomePage'
 import ExplorePage from './pages/explore/ExplorePage'
 import ChallengesPage from './pages/challenges/ChallengesPage'
+
 import CreatePage from './pages/create/CreatePage'
 
 const pageLabels = {
@@ -54,8 +55,10 @@ function App() {
         <ExplorePage />
       ) : activePage === 'challenges' ? (
         <ChallengesPage />
+
       ) : activePage === 'create' ? (
         <CreatePage />
+
       ) : (
         <PlaceholderPage page={activePage} />
       )}
