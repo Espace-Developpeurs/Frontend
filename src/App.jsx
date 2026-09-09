@@ -4,8 +4,8 @@ import AppLayout from './layouts/AppLayout/AppLayout'
 import HomePage from './pages/home/HomePage'
 import ExplorePage from './pages/explore/ExplorePage'
 import ChallengesPage from './pages/challenges/ChallengesPage'
-
 import CreatePage from './pages/create/CreatePage'
+import ProfilePage from './pages/profile/ProfilePage'
 
 const pageLabels = {
   home: 'Accueil',
@@ -55,10 +55,10 @@ function App() {
         <ExplorePage />
       ) : activePage === 'challenges' ? (
         <ChallengesPage />
-
       ) : activePage === 'create' ? (
         <CreatePage />
-
+      ) : activePage === 'profile' ? (
+        <ProfilePage />
       ) : (
         <PlaceholderPage page={activePage} />
       )}
