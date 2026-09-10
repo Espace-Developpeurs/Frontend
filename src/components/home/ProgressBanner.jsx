@@ -5,11 +5,11 @@ function ProgressBanner({ onNavigate }) {
       aria-label="Votre progression"
       role="button"
       tabIndex="0"
-      onClick={() => onNavigate('progression')}
+      onClick={() => onNavigate('progress')}
       onKeyDown={(event) => {
         if (event.key === 'Enter' || event.key === ' ') {
           event.preventDefault()
-          onNavigate('progression')
+          onNavigate('progress')
         }
       }}
     >
