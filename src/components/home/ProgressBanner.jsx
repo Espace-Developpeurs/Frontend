@@ -1,10 +1,17 @@
 function ProgressBanner({ onNavigate }) {
   return (
-    <button
-      type="button"
+    <section
       className="progress-banner"
+      aria-label="Votre progression"
+      role="button"
+      tabIndex="0"
       onClick={() => onNavigate('progression')}
-      aria-label="Voir votre progression"
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          onNavigate('progression')
+        }
+      }}
     >
       <div>
         <span className="small-label">VOTRE PROGRESSION</span>
@@ -18,11 +25,11 @@ function ProgressBanner({ onNavigate }) {
 
       <div
         className="progress-circle"
-        aria-hidden="true"
+        aria-label="Progression : 68 pour cent"
       >
         <strong>68%</strong>
       </div>
-    </button>
+    </section>
   )
 }
 
