@@ -7,6 +7,7 @@ import ChallengesPage from './pages/challenges/ChallengesPage'
 import CreatePage from './pages/create/CreatePage'
 import ProfilePage from './pages/profile/ProfilePage'
 import ProgressionPage from './pages/progression/ProgressionPage'
+import SavedPage from './pages/saved/SavedPage'
 
 const pageLabels = {
   home: 'Accueil',
@@ -50,7 +51,7 @@ function App() {
       activePage={activePage}
       onNavigate={handleNavigate}
     >
-      {activePage === 'home' ? (
+           {activePage === 'home' ? (
         <HomePage onNavigate={handleNavigate} />
       ) : activePage === 'explore' ? (
         <ExplorePage />
@@ -58,10 +59,12 @@ function App() {
         <ChallengesPage />
       ) : activePage === 'create' ? (
         <CreatePage />
-      ) : activePage === 'profile' ? (
-        <ProfilePage />
+      ) : activePage === 'saved' ? (
+        <SavedPage />
       ) : activePage === 'progress' ? (
         <ProgressionPage />
+      ) : activePage === 'profile' ? (
+        <ProfilePage />
       ) : (
         <PlaceholderPage page={activePage} />
       )}
