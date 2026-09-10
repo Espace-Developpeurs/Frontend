@@ -1,6 +1,18 @@
-function ProgressBanner() {
+function ProgressBanner({ onNavigate }) {
   return (
-    <section className="progress-banner" aria-label="Votre progression">
+    <section
+      className="progress-banner"
+      aria-label="Votre progression"
+      role="button"
+      tabIndex="0"
+      onClick={() => onNavigate('progress')}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          onNavigate('progress')
+        }
+      }}
+    >
       <div>
         <span className="small-label">VOTRE PROGRESSION</span>
 

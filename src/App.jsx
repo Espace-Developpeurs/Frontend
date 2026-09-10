@@ -6,6 +6,7 @@ import ExplorePage from './pages/explore/ExplorePage'
 import ChallengesPage from './pages/challenges/ChallengesPage'
 import CreatePage from './pages/create/CreatePage'
 import ProfilePage from './pages/profile/ProfilePage'
+import ProgressionPage from './pages/progression/ProgressionPage'
 
 const pageLabels = {
   home: 'Accueil',
@@ -59,6 +60,8 @@ function App() {
         <CreatePage />
       ) : activePage === 'profile' ? (
         <ProfilePage />
+      ) : activePage === 'progress' ? (
+        <ProgressionPage />
       ) : (
         <PlaceholderPage page={activePage} />
       )}
