@@ -1,6 +1,11 @@
-function ProgressBanner() {
+function ProgressBanner({ onNavigate }) {
   return (
-    <section className="progress-banner" aria-label="Votre progression">
+    <button
+      type="button"
+      className="progress-banner"
+      onClick={() => onNavigate('progression')}
+      aria-label="Voir votre progression"
+    >
       <div>
         <span className="small-label">VOTRE PROGRESSION</span>
 
@@ -13,11 +18,11 @@ function ProgressBanner() {
 
       <div
         className="progress-circle"
-        aria-label="Progression : 68 pour cent"
+        aria-hidden="true"
       >
         <strong>68%</strong>
       </div>
-    </section>
+    </button>
   )
 }
 
