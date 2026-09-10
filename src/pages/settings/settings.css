@@ -1,0 +1,251 @@
+.settings-page {
+  width: 100%;
+}
+
+.settings-header {
+  width: 100%;
+  max-width: 850px;
+  margin-bottom: 45px;
+}
+
+.settings-header p {
+  max-width: 680px;
+
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.settings-sections {
+  width: 100%;
+  max-width: 900px;
+}
+
+.settings-section + .settings-section {
+  margin-top: 48px;
+}
+
+.settings-section-heading {
+  margin-bottom: 22px;
+}
+
+.settings-section-heading h2 {
+  margin-top: 8px;
+}
+
+.settings-panel {
+  width: 100%;
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  width: 100%;
+  min-height: 92px;
+  padding: 22px 25px;
+
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.settings-row:last-child {
+  border-bottom: 0;
+}
+
+button.settings-row:hover {
+  background: var(--color-surface-hover);
+}
+
+.settings-row-content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  min-width: 0;
+}
+
+.settings-row-content strong {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.settings-row-content span {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+.settings-row-action {
+  flex: 0 0 auto;
+
+  color: var(--color-text-secondary);
+  font-size: 20px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.settings-row:hover .settings-row-action {
+  color: var(--color-primary);
+  transform: translateX(3px);
+}
+
+.settings-row-static {
+  cursor: default;
+}
+
+.settings-value {
+  flex: 0 0 auto;
+
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.settings-toggle {
+  position: relative;
+  flex: 0 0 auto;
+
+  width: 48px;
+  height: 27px;
+  padding: 3px;
+
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.settings-toggle.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.settings-toggle-thumb {
+  display: block;
+
+  width: 19px;
+  height: 19px;
+
+  background: var(--color-text-primary);
+  border-radius: 50%;
+
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+}
+
+.settings-toggle.active .settings-toggle-thumb {
+  transform: translateX(21px);
+}
+
+.settings-danger-button {
+  flex: 0 0 auto;
+
+  padding: 10px 16px;
+
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.settings-danger-button:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 650px) {
+  .settings-header {
+    margin-bottom: 35px;
+  }
+
+  .settings-section + .settings-section {
+    margin-top: 40px;
+  }
+
+  .settings-row {
+    min-height: 86px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-row {
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .settings-row-static {
+    align-items: center;
+  }
+
+  .settings-row-content {
+    gap: 6px;
+  }
+
+  .settings-row-content strong {
+    font-size: 13px;
+  }
+
+  .settings-row-content span {
+    font-size: 12px;
+  }
+
+  .settings-value {
+    font-size: 13px;
+  }
+
+  .settings-danger-button {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settings-row,
+  .settings-row-action,
+  .settings-toggle,
+  .settings-toggle-thumb,
+  .settings-danger-button {
+    transition: none;
+  }
+}

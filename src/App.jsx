@@ -8,6 +8,7 @@ import CreatePage from './pages/create/CreatePage'
 import ProfilePage from './pages/profile/ProfilePage'
 import ProgressionPage from './pages/progression/ProgressionPage'
 import SavedPage from './pages/saved/SavedPage'
+import SettingsPage from './pages/settings/SettingsPage'
 
 const pageLabels = {
   home: 'Accueil',
@@ -51,7 +52,7 @@ function App() {
       activePage={activePage}
       onNavigate={handleNavigate}
     >
-           {activePage === 'home' ? (
+      {activePage === 'home' ? (
         <HomePage onNavigate={handleNavigate} />
       ) : activePage === 'explore' ? (
         <ExplorePage />
@@ -65,6 +66,8 @@ function App() {
         <ProgressionPage />
       ) : activePage === 'profile' ? (
         <ProfilePage />
+      ) : activePage === 'settings' ? (
+        <SettingsPage />
       ) : (
         <PlaceholderPage page={activePage} />
       )}
