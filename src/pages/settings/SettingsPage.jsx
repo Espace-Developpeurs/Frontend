@@ -4,6 +4,16 @@ import './settings.css'
 
 function SettingsPage() {
   const [notificationsEnabled, setNotificationsEnabled] = useState(true)
+  const [language, setLanguage] = useState(
+    () => window.localStorage.getItem('app-language') || 'fr',
+  )
+
+  const handleLanguageChange = (event) => {
+    const nextLanguage = event.target.value
+
+    setLanguage(nextLanguage)
+    window.localStorage.setItem('app-language', nextLanguage)
+  }
 
   return (
     <section className="settings-page">
@@ -114,9 +124,18 @@ function SettingsPage() {
                 </span>
               </span>
 
-              <span className="settings-value">
-                Français
-              </span>
+              <label className="settings-language-control">
+                <span className="sr-only">Langue d'affichage</span>
+
+                <select
+                  value={language}
+                  onChange={handleLanguageChange}
+                  aria-label="Langue d'affichage"
+                >
+                  <option value="fr">🇫🇷 Français</option>
+                  <option value="en">🇬🇧 English</option>
+                </select>
+              </label>
             </div>
           </div>
         </section>
