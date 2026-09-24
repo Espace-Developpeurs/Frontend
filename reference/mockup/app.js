@@ -207,3 +207,10 @@ document
 
 
 showPage("home");
+/*****changeProfil ***/
+
+
+document.getElementById('editName').addEventListener('input',function(){
+  document.getElementById('nom').textContent=this.value;
+  document.getElementById('firstLitter').textContent=(this.value.charAt(0)).toUpperCase();
+})

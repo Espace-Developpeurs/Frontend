@@ -918,8 +918,37 @@ input:focus-visible {
 .mobile-nav {
     display: none;
 }
+/****  change profil*****/
+#profile-header{
+width:600px;
+margin:10px auto;
+padding: 20px;
+border:1px solid var(--surface-3);
+border-radius:10px;
+background-color: var(--surface);
 
+}
+.edit-panal{
+    width: 100%;
+    margin: 10px;
+    padding: 16px;  
+}
+#nom{
+    color:var(--text);
+    
+    padding: 10px;
+    text-align: center;
+}
+.edit-panal label{  margin: 20px 0 20px 0;padding:20px 0 20px 0; font-size:20px;}
+.edit-panal input{ width:100%; padding:10px;margin:10px 0 20px 0;background-color:var(--surface-2);border-radius:10px;border:1px solid var(--surface-3);color:var(--text);
+    }
+.edit-panal input:focus{outline-color:var(--surface-1);}
+/*.edit-panel-actions{ display:flex; gap:10px; margin-top:14px; }
+.chips{ display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.chip{ display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border:1px solid var(--border,#383C46); border-radius:999px; font-size:0.82rem; }
+.chip button{ background:none; border:none; cursor:pointer; }*/
 
+/***  responsive  *****/
 @media (max-width: 1100px) {
 
     .content-grid {
