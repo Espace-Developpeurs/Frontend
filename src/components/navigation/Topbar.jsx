@@ -73,16 +73,6 @@ function Topbar({ onNavigate }) {
                 type="button"
                 className="mobile-menu-item"
                 role="menuitem"
-                onClick={() => handleMobileNavigate('profile')}
-              >
-                <span aria-hidden="true">○</span>
-                <span>Mon profil</span>
-              </button>
-
-              <button
-                type="button"
-                className="mobile-menu-item"
-                role="menuitem"
                 onClick={() => handleMobileNavigate('settings')}
               >
                 <span aria-hidden="true">⚙</span>
