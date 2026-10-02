@@ -24,7 +24,7 @@ function HomePage({ onNavigate }) {
         </div>
       </header>
 
-      <ProgressBanner onNavigate={onNavigate} />
+      <ProgressBanner />
 
       <div className="section-heading">
         <div>
