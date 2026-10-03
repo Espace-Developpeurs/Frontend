@@ -680,7 +680,7 @@
 
             <div class="profile-header">
 
-                <div class="avatar large">
+                <div class="avatar large large1">
                     G
                 </div>
 
@@ -690,14 +690,14 @@
                         MEMBRE
                     </span>
 
-                    <h1>
+                    <h1 id="name">
                         Gilberto
                     </h1>
 
-                    <p>
+                    <p  id="skills">
                         Curieux · Technologie · Entrepreneuriat
                     </p>
-                    <div id="editSkillChips" class="chips">zohira</div>
+                    
 
                 </div>
 
@@ -751,15 +751,19 @@
                 <div id="changeProfilNomCompt" class="edit-panal">
                     <label for="editName">Nom</label><br>
                     <input  type="text"   id="editName"    placeholder="changer le nom" ><br>
-                    
+                    <label for="editPwd">Mot de passe</label><br>
+                    <div class="pwdField">
+                    <input type="password" id="editPwd" placeholder="Mot de passe">
+                <button type="button"  class="toggle-pwd"  id="togglePwd">Afficher</button></div>
                     <label for="editSkillInput" >Competences</label><br>
-                    <input type="text"  id="editSkillInput"  placeholder="ajouter une competence">
-                    <div id="editSkillChips" class="chips"></div>
+                    <input type="text"  id="editSkillInput"  placeholder="ajouter une competence puis appyer sur enter">
+                    <div id="listSkill" class="lists"></div>
                     <div id="edit-panal-action">
                         <button class="primary-button" onclick="saveProfil()">enregistrer</button>
-                        <button class="primary-button" onclick="closProfil()">annuler</button>
+                        <button class="primary-button" onclick="cancelProfil()">annuler</button>
                     </div>
                </div>
+
             </div>
         </section>
 
