@@ -10,6 +10,7 @@
     <title>Nouvelle Plateforme — Découvrir, apprendre, progresser</title>
 
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -225,6 +226,7 @@
                     </button>
 
                 </article>
+<!--*******************************************************************/-->
 
 
                 <!-- Contribution -->
@@ -318,7 +320,7 @@
             </div>
 
         </section>
-
+<!--**************************explorer page2***************************************-->
 
         <section class="page" id="page-explore">
 
@@ -419,7 +421,7 @@
 
         </section>
 
-
+<!--***************  defi page 3*************/-->
         <section class="page" id="page-challenges">
 
             <div class="page-header">
@@ -477,7 +479,7 @@
             </div>
 
         </section>
-
+<!--********************************creer page 4************-->
 
         <section class="page" id="page-create">
 
@@ -553,7 +555,7 @@
 
         </section>
 
-
+<!--********************** enregistrer page 5******************-->
         <section class="page" id="page-saved">
 
             <div class="page-header">
@@ -590,7 +592,7 @@
             </div>
 
         </section>
-
+<!--**************** maprogression page6*************-->
 
         <section class="page" id="page-progress">
 
@@ -672,13 +674,13 @@
             </div>
 
         </section>
-
+<!--*****************mon profil**************-->
 
         <section class="page" id="page-profile">
 
             <div class="profile-header">
 
-                <div class="avatar large">
+                <div class="avatar large large1">
                     G
                 </div>
 
@@ -688,18 +690,19 @@
                         MEMBRE
                     </span>
 
-                    <h1>
+                    <h1 id="name">
                         Gilberto
                     </h1>
 
-                    <p>
+                    <p  id="skills">
                         Curieux · Technologie · Entrepreneuriat
                     </p>
+                    
 
                 </div>
 
-                <button class="secondary-button">
-                    Modifier le profil
+                <button class="secondary-button"  id="change" data-page="changeProfile" >
+                    <span style="padding: 5px;"  ><i class="fa-solid fa-pen"></i></span>Modifier le profil
                 </button>
 
             </div>
@@ -740,6 +743,29 @@
             </div>
 
         </section>
+        <!-----------------modifier profil--------------->
+        <section  class="page"  id="page-changeProfile">
+            <div  id="profile-header">
+                <div  class="avatar large" id="firstLitter" style="margin:20px auto;">?</div>
+                <p  id="nom"></p>
+                <div id="changeProfilNomCompt" class="edit-panal">
+                    <label for="editName">Nom</label><br>
+                    <input  type="text"   id="editName"    placeholder="changer le nom" ><br>
+                    <label for="editPwd">Mot de passe</label><br>
+                    <div class="pwdField">
+                    <input type="password" id="editPwd" placeholder="Mot de passe">
+                <button type="button"  class="toggle-pwd"  id="togglePwd">Afficher</button></div>
+                    <label for="editSkillInput" >Competences</label><br>
+                    <input type="text"  id="editSkillInput"  placeholder="ajouter une competence puis appyer sur enter">
+                    <div id="listSkill" class="lists"></div>
+                    <div id="edit-panal-action">
+                        <button class="primary-button" onclick="saveProfil()">enregistrer</button>
+                        <button class="primary-button" onclick="cancelProfil()">annuler</button>
+                    </div>
+               </div>
+
+            </div>
+        </section>
 
     </main>
 
@@ -775,7 +801,7 @@
 
 </div>
 
-
+<script src="https://kit.fontawesome.com/4aabb24995.js" crossorigin="anonymous"></script>
 <script src="app.js"></script>
 
 </body>
